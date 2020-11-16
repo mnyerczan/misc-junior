@@ -1,0 +1,115 @@
+#page-header {
+    background-color: #fff;
+    display         : grid;
+    width           : 100vw;
+    grid-template:
+    "a b c" calc(var(--center-width) / 10)
+    "d d d" calc(var(--center-width) / 25)
+    / 1fr var(--center-width) 1fr;
+}
+#page-menu {
+    grid-area       : d;
+    box-shadow      : 0 0 10px #eee;
+    display         : flex;
+}
+#page-menu .menu-center {    
+    width           : var(--center-width);
+    margin          : 0 auto;
+}
+.colored-cases {
+    color           :#553483;
+}
+.menu-center > *{        
+    height          : 100%;
+    display         : inline-flex;
+    align-items     : center;       
+    text-transform  : uppercase;
+    font-weight     : bold;
+    font-size       : 20px;
+    padding         : 0 20px;
+    line-height     : 20px;
+    cursor          : pointer;
+    border-radius   : 2px; 
+    transition      : background-color 0.4s ease-in-out;      
+}
+.menu-center > *:last-child {
+    border-right    : 1px solid #eee;
+}
+.menu-center > *:hover {
+    background-color: #eee;
+}
+.img-container {
+    position        : relative;
+}
+
+/*---- header center section ----*/
+#header-container {
+    grid-area       : b;
+    padding         : 5px 0;
+    display         : grid;
+    grid-template:
+    "b-a b-b b-c" 100%
+    / 22% 1fr 9%;
+}
+#site-icon-container {
+    grid-area       : b-a; 
+    padding         : 5px;   
+}
+#site-icon-container > * {    
+    float           : left;
+    display         : flex;
+}
+#site-icon-container img {    
+    height          : 100%;
+}
+#site-icon-container .separator {
+    background-color: #ed008c;
+    height          : 100%;
+    width           : 2px;    
+}
+#site-icon-container > div:last-child {
+    height          : calc(100% - 2 * 10px);
+    width           : calc(118px - 2 * 10px);
+    padding         : 10px;
+    font-size       : 22px;
+    line-height     : 22px;
+    text-transform  : uppercase;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;      
+}
+
+#header-nav {
+    grid-area       : b-b;    
+    padding         : 10px 20px;
+}
+#header-nav > :nth-child(2n + 1) {
+    height          : 49%;
+}
+#header-nav > :nth-child(2n) {
+    height          : 2%;    
+    background-image: linear-gradient(to left, #eee 20%, white 80%);
+}
+#header-nav  > * > * {
+    display         : flex;
+    height          : 100%;
+    align-items     : center;
+    font-size       : 17px;
+    float           : right;
+    margin          : 0 10px;
+}
+#site-description > div:last-child > img {
+    display         : block;
+    margin          : 0 5px;
+}
+#peronal-controls > * {
+    font-weight     : bold;
+}
+#logo {
+    grid-area       : b-c;
+}
+#logo img{
+    width           : 100%;
+    height          : 100%;
+    border-radius   : 50%;
+}
